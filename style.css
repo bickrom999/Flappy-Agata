@@ -1,0 +1,63 @@
+/* --- Global Resets and Base Styles --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* Prevents unwanted text selection on game elements */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    /* Centers the canvas in the middle of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+    font-family: sans-serif;
+}
+
+/* --- Canvas Styling --- */
+#gameCanvas {
+    /* Ensures the element is treated as a block for layout purposes */
+    display: block;
+    /* Border to define the game area */
+    border: 5px solid #333;
+    /* Fallback background color, will be covered by the background image in JS */
+    background-color: skyblue; 
+}
+
+/* --- Game Over Overlay Styling --- */
+#gameOverScreen {
+    /* Fixes the screen to the viewport, ensuring it stays centered */
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    /* Transforms the element to be perfectly centered */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black overlay */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10; /* Ensures it is on top of the canvas */
+    border: 3px solid white;
+}
+
+#gameOverScreen h1 {
+    color: red;
+    margin-top: 0;
+}
+
+#gameOverImage {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+}
+
+/* --- Utility Class --- */
+.hidden {
+    /* Used by JavaScript to hide the Game Over screen */
+    display: none;
+}audio
